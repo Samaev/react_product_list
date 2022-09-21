@@ -7,8 +7,8 @@ Demostration works only locally. Quick start:
 
 Clone the repo
 Enter the directory cd demo-book-list_react
-Install dependencies: npm i to USE API options.
-Run npm run dev to start APP and SERVER at once by one command.
+Install dependencies: `npm i` to USE API options.
+Run `npm run dev` to start APP and SERVER at once by one command.
 Open http://localhost:3000 to view it in the browser.
 
 Server works on http://localhost:3030, you can check it with request to http://localhost:3030/products and http://localhost:3030/comments to view it in the browser.
