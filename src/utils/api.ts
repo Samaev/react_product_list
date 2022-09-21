@@ -6,7 +6,7 @@ export const API_COMMENTS = "http://localhost:3030/comments";
 export const getProducts = async (): Promise<Product[]> => {
   const responce = await fetch(API_PRODUCTS);
   //@ts-ignore
-  return responce.json;
+  return responce.json();
 };
 
 export const getAllComments = async (): Promise<Comment[]> => {
@@ -23,16 +23,10 @@ export const getSortedProducts = async () => {
     .sort((a: Product, b: Product) => a.name.localeCompare(b.name));
 };
 
-export const getSortedProductsByName = async () => {
-  const sortedProducts = await getProducts();
-  return sortedProducts
-    .sort((a: Product, b: Product) => a.name.localeCompare(b.name));
-};
-
 export const getComments = async (productId: number) => {
   const responce = await getAllComments();
 
-  return responce.filter(comment => comment.productId === productId);
+  return responce.filter((comment) => comment.productId === productId);
 };
 export const getProduct = async (productId: number) => {
   const responce = await fetch(`${API_PRODUCTS}/${productId}`);
@@ -51,11 +45,11 @@ export const postProduct = async (product: Omit<Product, "id">) => {
   return responce.json();
 };
 
-export async function postComment(comment: Omit<Comment, 'id'>) {
+export async function postComment(comment: Omit<Comment, "id">) {
   const response = await fetch(API_COMMENTS, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-type': 'application/json; charset=UTF-8',
+      "Content-type": "application/json; charset=UTF-8",
     },
     body: JSON.stringify(comment),
   });
@@ -65,25 +59,24 @@ export async function postComment(comment: Omit<Comment, 'id'>) {
 
 export const editProduct = async (product: Product) => {
   const response = await fetch(`${API_PRODUCTS}/${product.id}`, {
-    method: 'PATCH',
+    method: "PATCH",
     headers: {
-      'Content-type': 'application/json; charset=UTF-8',
+      "Content-type": "application/json; charset=UTF-8",
     },
     body: JSON.stringify(product),
   });
 
   return response.json();
-}
+};
 
-
-export const deleteProduct = async (productId: number)=> {
+export const deleteProduct = async (productId: number) => {
   return fetch(`${API_PRODUCTS}/${productId}`, {
-    method: 'DELETE',
+    method: "DELETE",
   });
-}
+};
 
 export const deleteComment = async (commentId: number) => {
   return fetch(`${API_COMMENTS}/${commentId}`, {
-    method: 'DELETE',
+    method: "DELETE",
   });
 };

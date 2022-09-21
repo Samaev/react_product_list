@@ -52,7 +52,7 @@ export const FormAddProduct:React.FC = () => {
   const handleAddProduct = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const product = {
-      imageUrl: inputValues.imageUrl,
+      imageUrl: inputValues.imageUrl ? inputValues.imageUrl : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Grosser_Panda.JPG/275px-Grosser_Panda.JPG",
       name: inputValues.name,
       count: inputValues.count,
       size: {

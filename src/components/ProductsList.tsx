@@ -65,37 +65,37 @@ export const ProductsList: React.FC = () => {
   }, []);
   return (
     <div>
-      <div className="GoodsList">
-        <h2 className="GoodsList__title">Goods:</h2>
-        <div className="GoodsList__list-container">
-          <div className="select GoodsList__select">
+      <div className="productsList">
+        <h2 className="productsList__title">Products:</h2>
+        <div className="productsList__list-container">
+          <div className="select productsList__select">
             <select id="sortBy" onChange={handleSortBy}>
               <option value="">Sort by:</option>
               <option value="alphabet">Alphabet</option>
               <option value="count">Count</option>
             </select>
           </div>
-          <ul className="GoodsList__list">
+          <ul className="productsList__list">
             {products.map((product) => (
-              <li key={product.id} className="GoodsList__item">
+              <li key={product.id} className="productsList__item">
                 <img src={product.imageUrl} alt="placeholder" />
-                <h3 className="GoodsList__product-title">{product.name}</h3>
-                <span className="GoodsList__product-count">
+                <h3 className="productsList__product-title">{product.name}</h3>
+                <span className="productsList__product-count">
                   Quantity:&nbsp;
                   {product.count}
                 </span>
-                <div className="GoodsList__buttons buttons">
+                <div className="productsList__buttons buttons">
                   <Link
                     to={`${product.id}`}
                     type="button"
-                    className="GoodsList__user-button button"
+                    className="productsList__user-button button"
                     onClick={() => loadProduct(product.id)}
                   >
-                    More
+                    About
                   </Link>
                   <button
                     type="button"
-                    className="GoodsList__user-button button"
+                    className="productsList__user-button button"
                     onClick={() => handleDeleteConfirmation(product.id)}
                   >
                     Delete

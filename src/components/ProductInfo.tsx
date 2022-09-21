@@ -59,30 +59,30 @@ export const ProductInfo: React.FC = () => {
   return (
     <>
       {product && (
-        <div className="Product">
+        <div className="product">
           <img
-            className="Product__photo"
+            className="product__photo"
             src={product.imageUrl}
             alt="placeholder"
           />
-          <h3 className="Product__name">{product.name}</h3>
-          <p className="Product__info">
+          <h3 className="product__name">{product.name}</h3>
+          <p className="product__info">
             {`Quantity: ${product.count}\n`}
             {`Width: ${product.size.width}\n`}
             {`Height: ${product.size.height}\n`}
             {`Weight: ${product.weight}\n`}
           </p>
-          <div className="Product__comments">
+          <div className="product__comments">
             <span>---</span>
-            <h4 className="Product__comments-title">Comments:</h4>
-            <ul className="Product__comments-list">
+            <h4 className="product__comments-title">Comments:</h4>
+            <ul className="product__comments-list">
               {comments.map(comment => (
                 <li key={comment.id}>
                   {comment.description}
                   &nbsp;
                   <button
                     type="button"
-                    className="Product__comment-delete button is-light"
+                    className="product__comment-delete button is-light"
                     onClick={() => handleDelete(comment.id)}
                   >
                     X
@@ -98,17 +98,17 @@ export const ProductInfo: React.FC = () => {
             >
             </textarea>
           </div>
-          <div className="Product__buttons">
+          <div className="product__buttons">
             <Link
               to="/"
               type="button"
-              className="Product__button button"
+              className="product__button button"
             >
               Back
             </Link>
             <button
               type="button"
-              className="Product__button button is-success"
+              className="product__button button is-success"
               onClick={handlePostComment}
             >
               Comment
