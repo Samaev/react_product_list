@@ -15,16 +15,16 @@ export const getAllComments = async (): Promise<Comment[]> => {
   return responce.json();
 };
 
-export const getSortedProductsByOrder = async () => {
+export const getSortedProducts = async () => {
   const sortedProducts = await getProducts();
 
   return sortedProducts
     .sort((a: Product, b: Product) => +b.count - +a.count)
+    .sort((a: Product, b: Product) => a.name.localeCompare(b.name));
 };
 
 export const getSortedProductsByName = async () => {
   const sortedProducts = await getProducts();
-
   return sortedProducts
     .sort((a: Product, b: Product) => a.name.localeCompare(b.name));
 };
@@ -34,7 +34,11 @@ export const getComments = async (productId: number) => {
 
   return responce.filter(comment => comment.productId === productId);
 };
+export const getProduct = async (productId: number) => {
+  const responce = await fetch(`${API_PRODUCTS}/${productId}`);
 
+  return responce.json();
+};
 export const postProduct = async (product: Omit<Product, "id">) => {
   const responce = await fetch(API_PRODUCTS, {
     method: "POST",

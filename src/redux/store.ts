@@ -28,10 +28,12 @@ const reducer = (state = initialState, action: AnyAction) => {
   }
 };
 
-export const getProductsSelector = (state: State) => state.goods;
+export const getProductsSelector = (state: State) => state.products;
 export const getProductSelector = (state: State) => state.product;
+
 export const store = createStore(reducer);
-export const loadGoodsAction = (payload: Product[]) => ({
+
+export const loadProductsAction = (payload: Product[]) => ({
   type: "products/load",
   payload,
 });

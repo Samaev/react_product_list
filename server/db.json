@@ -1,0 +1,17 @@
+{
+  "products": [
+    {
+      "imageUrl": "12",
+      "name": "123",
+      "count": "123",
+      "size": {
+        "width": "123",
+        "height": "23"
+      },
+      "weight": "23",
+      "comments": [],
+      "id": 1
+    }
+  ],
+  "comments": []
+}
