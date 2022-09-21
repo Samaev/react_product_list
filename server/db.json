@@ -1,72 +1,17 @@
 {
   "products": [
     {
-      "imageUrl": "12werew",
-      "name": "123",
-      "count": "123",
+      "imageUrl": "wer",
+      "name": "wer",
+      "count": "234",
       "size": {
-        "width": "123",
-        "height": "23"
-      },
-      "weight": "23",
-      "comments": [],
-      "id": 1
-    },
-    {
-      "imageUrl": "234",
-      "name": "234",
-      "count": "2342",
-      "size": {
-        "width": "3423",
-        "height": "4234"
+        "width": "234",
+        "height": "234"
       },
       "weight": "234",
       "comments": [],
-      "id": 2
-    },
-    {
-      "imageUrl": "234",
-      "name": "4",
-      "count": "4",
-      "size": {
-        "width": "4",
-        "height": "4"
-      },
-      "weight": "4",
-      "comments": [],
-      "id": 3
-    },
-    {
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Grosser_Panda.JPG/275px-Grosser_Panda.JPG",
-      "name": "цук",
-      "count": "цук",
-      "size": {
-        "width": "ук",
-        "height": "ук"
-      },
-      "weight": "ук",
-      "comments": [],
-      "id": 4
+      "id": 1
     }
   ],
-  "comments": [
-    {
-      "productId": 2,
-      "description": "wer",
-      "date": "Wed Sep 21 2022 09:40:45 GMT+0300 (Москва, стандартное время)",
-      "id": 1
-    },
-    {
-      "productId": 2,
-      "description": "werwe",
-      "date": "Wed Sep 21 2022 09:40:47 GMT+0300 (Москва, стандартное время)",
-      "id": 2
-    },
-    {
-      "productId": 1,
-      "description": "qwerqwer",
-      "date": "Wed Sep 21 2022 09:52:59 GMT+0300 (Москва, стандартное время)",
-      "id": 4
-    }
-  ]
+  "comments": []
 }
